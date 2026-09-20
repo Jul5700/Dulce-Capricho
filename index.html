@@ -13,6 +13,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20260920">
+
+<style>
+.mission-vision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin:2rem 0}
+.mission-card,.vision-card{padding:1.5rem;border-radius:1.25rem;background:var(--cream-soft,#fff8ec);border:1px solid rgba(107,58,23,.12);box-shadow:0 12px 30px rgba(59,36,23,.08)}
+.mission-card h3,.vision-card h3{margin-top:0}
+.team-avatar{display:grid;place-items:center}
+.team-initial{width:100%;height:100%;min-height:100%;display:grid;place-items:center;font-size:2rem;font-weight:700;color:var(--cream-soft,#fff8ec)}
+.image-flavor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.image-flavor-card{overflow:hidden}
+.flavor-image{display:block;width:100%;aspect-ratio:1054/1492;object-fit:cover}
+.image-flavor-card .flavor-body{padding-top:1.1rem}
+@media (max-width:760px){
+  .mission-vision-grid,.image-flavor-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -138,6 +153,18 @@
       </div>
     </div>
 
+
+      <div class="mission-vision-grid" data-reveal>
+        <article class="mission-card">
+          <h3>Misión</h3>
+          <p>Dulce Capricho S.A. es una empresa productora y comercializadora de obleas, elaboradas con ingredientes de calidad y diferentes combinaciones de sabores. Nuestro propósito es ofrecer productos deliciosos e innovadores que brinden una experiencia dulce, fresca y agradable a nuestros clientes, satisfaciendo sus gustos y necesidades en el mercado regional.</p>
+        </article>
+        <article class="vision-card">
+          <h3>Visión</h3>
+          <p>Para el año 2027, Dulce Capricho S.A. busca ser reconocida en Bogotá por la elaboración y comercialización de obleas de alta calidad, destacándose por la innovación, variedad y sabor de nuestros productos, y convirtiéndose en una marca reconocida y preferida por nuestros clientes.</p>
+        </article>
+      </div>
+
     <div class="container team-block" data-reveal>
       <h3>El equipo</h3>
       <div class="team-grid">
@@ -174,6 +201,28 @@
           </div>
           <p class="team-name">Julián Martínez</p>
           <p class="team-role">Tesorero</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <div class="team-initial">E</div>
+          </div>
+          <p class="team-name">Emily</p>
+          <p class="team-role">Integrante</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <div class="team-initial">D</div>
+          </div>
+          <p class="team-name">Deivid</p>
+          <p class="team-role">Integrante</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <div class="team-initial">T</div>
+          </div>
+          <p class="team-name">Tomás</p>
+          <p class="team-role">Secretario</p>
         </div>
       </div>
     </div>
@@ -222,83 +271,45 @@
         <p>Elige tu combinación o pide la de siempre.</p>
       </div>
 
-      <div class="menu-grid">
+      <div class="menu-grid image-flavor-grid">
 
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--caramel)">
-          <div class="flavor-top"></div>
+        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--fresa)">
+          <img class="flavor-image" src="oblea-loca.jpeg" alt="Oblea Loca de Dulce Capricho">
           <div class="flavor-body">
             <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--caramel)"></div>
-              <span class="flavor-title">La Clásica</span>
+              <span class="flavor-title">Oblea Loca</span>
             </div>
-            <p class="flavor-desc">Arequipe y queso rallado, la combinación de toda la vida.</p>
-            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Queso</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$4.000</span></div>
+            <p class="flavor-desc">Crujiente por fuera y totalmente loca por dentro, con arequipe, crema, trozos de galleta y chispas.</p>
           </div>
         </article>
 
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--mora)">
-          <div class="flavor-top"></div>
+        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--caramel-light)">
+          <img class="flavor-image" src="oblea-sencilla.jpeg" alt="Oblea Sencilla de Dulce Capricho">
           <div class="flavor-body">
             <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--mora)"></div>
-              <span class="flavor-title">La Boyacense</span>
+              <span class="flavor-title">Oblea Sencilla</span>
             </div>
-            <p class="flavor-desc">Arequipe, queso campesino y mermelada de mora casera.</p>
-            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Mora</span><span class="tag">Queso</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$5.500</span></div>
+            <p class="flavor-desc">Clásica, suave y deliciosa, perfecta para cualquier momento.</p>
           </div>
         </article>
 
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--citrus)">
-          <div class="flavor-top"></div>
+        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--citrus)">
+          <img class="flavor-image" src="oblea-mexicana.jpeg" alt="Oblea Mexicana de Dulce Capricho">
           <div class="flavor-body">
             <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--citrus)"></div>
-              <span class="flavor-title">Tropical</span>
+              <span class="flavor-title">Oblea Mexicana</span>
             </div>
-            <p class="flavor-desc">Arequipe, piña en almíbar y un toque de crema de leche.</p>
-            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Piña</span><span class="tag">Crema</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$5.000</span></div>
+            <p class="flavor-desc">Una combinación dulce y picante inspirada en los sabores de México.</p>
           </div>
         </article>
 
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--fresa)">
-          <div class="flavor-top"></div>
+        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--fresa)">
+          <img class="flavor-image" src="oblea-fresa.jpeg" alt="Oblea de Fresa de Dulce Capricho">
           <div class="flavor-body">
             <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--fresa)"></div>
-              <span class="flavor-title">Choco-fresa</span>
+              <span class="flavor-title">Oblea de Fresa</span>
             </div>
-            <p class="flavor-desc">Chocolate derretido, fresas frescas y lechera por encima.</p>
-            <div class="flavor-tags"><span class="tag">Chocolate</span><span class="tag">Fresa</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$6.000</span></div>
-          </div>
-        </article>
-
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--caramel-light)">
-          <div class="flavor-top"></div>
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--caramel-light)"></div>
-              <span class="flavor-title">La Sencilla</span>
-            </div>
-            <p class="flavor-desc">Solo arequipe, para quien sabe lo que quiere.</p>
-            <div class="flavor-tags"><span class="tag">Arequipe</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$3.000</span></div>
-          </div>
-        </article>
-
-        <article class="flavor-card" data-reveal style="--flavor-color:var(--choco-deep)">
-          <div class="flavor-top"></div>
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <div class="mini-wafer" style="--flavor-color:var(--choco-deep)"></div>
-              <span class="flavor-title">Especial de la Casa</span>
-            </div>
-            <p class="flavor-desc">Arequipe, queso, mora, coco y chispas de chocolate. Para compartir (o no).</p>
-            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Mora</span><span class="tag">Coco</span><span class="tag">Chocolate</span></div>
-            <div class="flavor-footer"><span class="flavor-price">$7.500</span></div>
+            <p class="flavor-desc">Fresca, ligera y deliciosa, con fresas frescas, crema y dulce de leche.</p>
           </div>
         </article>
 
@@ -347,12 +358,11 @@
             <rect x="8" y="12" width="32" height="24" rx="4"/><path d="M8 14l16 12 16-12"/>
           </svg>
           <h3>Contacto</h3>
-          <p>Paula (Gerente): <a href="tel:123456789">123 456 789</a> · Julián (Tesorero): <a href="tel:987654321">987 654 321</a></p>
+          <p>Paula (Gerente): <a href="tel:3222064113">322 206 4113</a> · Julián (Tesorero): <a href="tel:3015574789">301 557 4789</a></p>
           <p>Instagram: @dulcecapricho</p>
         </div>
       </div>
 
-      <p class="placeholder-note">* Horario e Instagram son datos de ejemplo — reemplázalos por la información real del negocio.</p>
     </div>
   </section>
 
