@@ -15,18 +15,14 @@
 <link rel="stylesheet" href="styles.css?v=20260920">
 
 <style>
-.mission-vision-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1.25rem;
-  margin:2rem 0;
+/* Fuerza la visibilidad de todas las secciones */
+[data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
 }
-.mission-card,.vision-card{
-  padding:1.5rem;
-  border-radius:1.25rem;
-  background:var(--cream-soft,#fff8ec);
-  border:1px solid rgba(107,58,23,.12);
-  box-shadow:0 12px 30px rgba(59,36,23,.08);
+
+.mission-vision-grid{
 }
 .mission-card h3,.vision-card h3{margin-top:0}
 .team-avatar{
