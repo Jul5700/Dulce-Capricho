@@ -15,6 +15,17 @@
 <link rel="stylesheet" href="styles.css?v=20260920">
 
 <style>
+  /* Efecto de agrandado al pasar el cursor sobre salsas y toppings */
+.topping-card, .salsa-card, .flavor-card, .sabor-card, .topping-item, .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.topping-card:hover, .salsa-card:hover, .flavor-card:hover, .sabor-card:hover, .topping-item:hover, .card:hover {
+  transform: scale(1.08); /* Agranda la tarjeta un 8% */
+  box-shadow: 0 10px 20px rgba(74, 46, 27, 0.25);
+  z-index: 5;
+}
   /* Ocultar menú superior con transición suave */
 header {
   position: fixed;
