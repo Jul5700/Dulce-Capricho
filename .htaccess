@@ -1,0 +1,64 @@
+# ============================================================================
+# .htaccess — Dulce Capricho. Sube este archivo a la raíz del hosting.
+# Sin esto, Hostinger puede seguir mostrando la versión vieja del sitio
+# hasta 30 días después de subir cambios.
+# ============================================================================
+
+# ----- Duración de caché -----
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — nunca cachear
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Código — revalida cada hora
+  ExpiresByType text/css "access plus 1 hours"
+  ExpiresByType application/javascript "access plus 1 hours"
+  ExpiresByType text/javascript "access plus 1 hours"
+  ExpiresByType application/json "access plus 1 hours"
+
+  # Imágenes — caché larga
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+
+  # Video — caché larga (cambia el nombre del archivo si lo reemplazas)
+  ExpiresByType video/mp4 "access plus 1 month"
+
+  # Fuentes
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# ----- Cache-Control -----
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|mjs|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|woff|woff2|mp4)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ----- Tipos MIME correctos -----
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/javascript .js
+  AddType text/css .css
+  AddType application/json .json
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+  AddType image/svg+xml .svg
+  AddType video/mp4 .mp4
+</IfModule>
+
+# ----- Compresión gzip -----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml font/woff font/woff2
+</IfModule>

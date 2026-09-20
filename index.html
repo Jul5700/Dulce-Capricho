@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dulce Capricho — Amor a primera mordida</title>
+<meta name="description" content="Dulce Capricho: obleas artesanales hechas al momento, un proyecto de estudiantes de la especialidad de Comercio.">
+<link rel="icon" type="image/png" href="assets/img/favicon-dulce-capricho.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260920">
+</head>
+<body>
+
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+<!-- Custom cursor (desktop only, decorative) -->
+<div class="cursor" data-cursor-root aria-hidden="true">
+  <span class="cursor-dot"></span>
+  <span class="cursor-ring"></span>
+</div>
+
+<header data-nav>
+  <div class="container nav-inner">
+    <a href="#inicio" class="brand">
+      <img class="brand-mark" src="assets/img/logo-dulce-capricho.webp" alt="Logo de Dulce Capricho Obleas" width="44" height="44">
+      <span class="brand-name">Dulce Capricho<span>Amor a primera mordida</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#sabores">Sabores</a>
+      <a href="#pedidos">Pedidos</a>
+      <a href="#pedidos" class="btn btn-primary">Pedir ahora</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Proyecto estudiantil · Especialidad en Comercio</p>
+        <h1>Capas de tradición, un sabor a la vez.</h1>
+        <p class="tagline-stamp">Amor a primera mordida</p>
+        <p class="lead">En Dulce Capricho armamos cada oblea al momento: masa crocante, arequipe calientito y los sabores de siempre, hechas con las manos de un equipo de estudiantes.</p>
+        <div class="cta-row">
+          <a href="#sabores" class="btn btn-primary">Ver sabores</a>
+          <a href="#pedidos" class="btn btn-secondary">Cómo pedir</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg viewBox="0 0 440 440" role="img" aria-label="Ilustración de una oblea armándose por capas">
+          <defs>
+            <pattern id="waffle" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <rect width="14" height="14" fill="var(--cream-soft)"/>
+              <line x1="0" y1="0" x2="0" y2="14" stroke="var(--wafer-line)" stroke-width="2"/>
+              <line x1="0" y1="0" x2="14" y2="0" stroke="var(--wafer-line)" stroke-width="2"/>
+            </pattern>
+            <radialGradient id="waferShade" cx="35%" cy="28%" r="75%">
+              <stop offset="0%" stop-color="#FFFDF6"/>
+              <stop offset="55%" stop-color="#F7ECD9" stop-opacity="0"/>
+              <stop offset="100%" stop-color="#B98A4E" stop-opacity=".4"/>
+            </radialGradient>
+            <linearGradient id="drizzleShade" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C98F52"/>
+              <stop offset="50%" stop-color="#8B5323"/>
+              <stop offset="100%" stop-color="#6B3A17"/>
+            </linearGradient>
+            <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#3B2417" flood-opacity="0.25"/>
+            </filter>
+          </defs>
+
+          <g class="wafer-bottom">
+            <circle cx="220" cy="238" r="150" fill="url(#waffle)" stroke="var(--caramel-deep)" stroke-width="4" filter="url(#softShadow)"/>
+            <circle cx="220" cy="238" r="150" fill="url(#waferShade)"/>
+          </g>
+
+          <path class="drizzle" d="M85,220 Q135,175 185,220 T285,220 T355,195" fill="none" stroke="url(#drizzleShade)" stroke-width="15" stroke-linecap="round"/>
+          <path class="drizzle" d="M85,216 Q135,171 185,216 T285,216 T355,191" fill="none" stroke="#E8C387" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+
+          <circle class="sprinkle" cx="140" cy="255" r="6" fill="var(--mora)"/>
+          <circle class="sprinkle" cx="300" cy="250" r="6" fill="var(--citrus)"/>
+          <circle class="sprinkle" cx="180" cy="290" r="5" fill="var(--fresa)"/>
+          <circle class="sprinkle" cx="260" cy="295" r="5" fill="var(--mora)"/>
+          <circle class="sprinkle" cx="220" cy="270" r="6" fill="var(--citrus)"/>
+          <circle class="sprinkle" cx="320" cy="275" r="5" fill="var(--fresa)"/>
+
+          <g class="wafer-top">
+            <circle cx="220" cy="228" r="150" fill="url(#waffle)" stroke="var(--caramel-deep)" stroke-width="4" opacity="0.97" filter="url(#softShadow)"/>
+            <circle cx="220" cy="228" r="150" fill="url(#waferShade)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Arequipe</span><span>Mora</span><span>Coco</span><span>Chocolate</span><span>Piña</span><span>Fresa</span><span>Queso campesino</span>
+      <span>Arequipe</span><span>Mora</span><span>Coco</span><span>Chocolate</span><span>Piña</span><span>Fresa</span><span>Queso campesino</span>
+    </div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <section class="story" id="nosotros">
+    <div class="container story-inner">
+      <div data-reveal>
+        <h2>Un proyecto que nació en el salón de clase</h2>
+        <p>Dulce Capricho es la empresa que armamos como estudiantes de la especialidad de Comercio: una idea de emprendimiento que decidimos llevar de la teoría a la plaza, oblea por oblea.</p>
+        <p>Cada oblea se arma al momento de pedirla, con arequipe casero y los sabores de siempre. Nada de vitrinas frías: aquí todo se sirve recién hecho, con las mismas ganas con las que armamos el proyecto.</p>
+      </div>
+
+      <div class="story-video-wrap" data-reveal>
+        <div class="story-video-frame">
+          <video
+            data-story-video
+            src="assets/video/equipo-dulce-capricho.mp4"
+            poster="assets/video/equipo-dulce-capricho-poster.jpg"
+            autoplay muted loop playsinline preload="metadata">
+          </video>
+        </div>
+        <p class="story-video-caption">Así armamos el proyecto, sonrisa incluida</p>
+      </div>
+    </div>
+
+    <div class="container team-block" data-reveal>
+      <h3>El equipo</h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 100 100" role="img" aria-label="Foto de Paula Guataquira (marcador de posición)">
+              <defs>
+                <radialGradient id="avatarBgPaula" cx="35%" cy="30%" r="75%">
+                  <stop offset="0%" stop-color="#E8A33D"/>
+                  <stop offset="100%" stop-color="#A23B5C"/>
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="50" fill="url(#avatarBgPaula)"/>
+              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
+              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
+            </svg>
+          </div>
+          <p class="team-name">Paula Guataquira</p>
+          <p class="team-role">Gerente</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 100 100" role="img" aria-label="Foto de Julián Martínez (marcador de posición)">
+              <defs>
+                <radialGradient id="avatarBgJulian" cx="35%" cy="30%" r="75%">
+                  <stop offset="0%" stop-color="#C98F52"/>
+                  <stop offset="100%" stop-color="#6B3A17"/>
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="50" fill="url(#avatarBgJulian)"/>
+              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
+              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
+            </svg>
+          </div>
+          <p class="team-name">Julián Martínez</p>
+          <p class="team-role">Tesorero</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="values">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2>Lo que no cambia</h2>
+        <p>Tres cosas que hacemos igual desde el primer día.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-reveal>
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M24 6c-8 4-14 12-14 20a14 14 0 0 0 28 0c0-8-6-16-14-20Z"/>
+            <path d="M24 16v18"/>
+          </svg>
+          <h3>Ingredientes frescos</h3>
+          <p>Arequipe hecho en casa, frutas de temporada y queso campesino escogido a diario.</p>
+        </div>
+        <div class="value-card" data-reveal>
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M24 40s-16-9.5-16-21A9 9 0 0 1 24 13a9 9 0 0 1 16 6c0 11.5-16 21-16 21Z"/>
+          </svg>
+          <h3>Hecho con dedicación</h3>
+          <p>Un proyecto armado entre estudiantes, con las ganas de hacer las cosas bien desde la primera oblea.</p>
+        </div>
+        <div class="value-card" data-reveal>
+          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="24" cy="24" r="17"/>
+            <path d="M24 14v10l7 5"/>
+          </svg>
+          <h3>Hechas al momento</h3>
+          <p>Cada oblea se arma cuando la pides: crocante, calientita y recién servida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SABORES -->
+  <section class="menu" id="sabores">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2>Sabores</h2>
+        <p>Elige tu combinación o pide la de siempre.</p>
+      </div>
+
+      <div class="menu-grid">
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--caramel)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--caramel)"></div>
+              <span class="flavor-title">La Clásica</span>
+            </div>
+            <p class="flavor-desc">Arequipe y queso rallado, la combinación de toda la vida.</p>
+            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Queso</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$4.000</span></div>
+          </div>
+        </article>
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--mora)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--mora)"></div>
+              <span class="flavor-title">La Boyacense</span>
+            </div>
+            <p class="flavor-desc">Arequipe, queso campesino y mermelada de mora casera.</p>
+            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Mora</span><span class="tag">Queso</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$5.500</span></div>
+          </div>
+        </article>
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--citrus)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--citrus)"></div>
+              <span class="flavor-title">Tropical</span>
+            </div>
+            <p class="flavor-desc">Arequipe, piña en almíbar y un toque de crema de leche.</p>
+            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Piña</span><span class="tag">Crema</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$5.000</span></div>
+          </div>
+        </article>
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--fresa)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--fresa)"></div>
+              <span class="flavor-title">Choco-fresa</span>
+            </div>
+            <p class="flavor-desc">Chocolate derretido, fresas frescas y lechera por encima.</p>
+            <div class="flavor-tags"><span class="tag">Chocolate</span><span class="tag">Fresa</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$6.000</span></div>
+          </div>
+        </article>
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--caramel-light)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--caramel-light)"></div>
+              <span class="flavor-title">La Sencilla</span>
+            </div>
+            <p class="flavor-desc">Solo arequipe, para quien sabe lo que quiere.</p>
+            <div class="flavor-tags"><span class="tag">Arequipe</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$3.000</span></div>
+          </div>
+        </article>
+
+        <article class="flavor-card" data-reveal style="--flavor-color:var(--choco-deep)">
+          <div class="flavor-top"></div>
+          <div class="flavor-body">
+            <div class="flavor-head">
+              <div class="mini-wafer" style="--flavor-color:var(--choco-deep)"></div>
+              <span class="flavor-title">Especial de la Casa</span>
+            </div>
+            <p class="flavor-desc">Arequipe, queso, mora, coco y chispas de chocolate. Para compartir (o no).</p>
+            <div class="flavor-tags"><span class="tag">Arequipe</span><span class="tag">Mora</span><span class="tag">Coco</span><span class="tag">Chocolate</span></div>
+            <div class="flavor-footer"><span class="flavor-price">$7.500</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="sides" data-reveal>
+        <strong>¿Para acompañar?</strong>
+        <span class="side-chip">Chocolate caliente</span>
+        <span class="side-chip">Agua de panela con limón</span>
+        <span class="side-chip">Café tinto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEDIDOS -->
+  <section class="pedidos" id="pedidos">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2>¿Cómo pedir?</h2>
+        <p>Pásate por el local o escríbenos y te la dejamos lista.</p>
+      </div>
+
+      <div class="event-banner" data-reveal>
+        📍 Nos encuentras en el <strong>Parque Principal de Guateque</strong> — <strong>27 de septiembre de 2026</strong>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card" data-reveal>
+          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="24" cy="24" r="18"/><path d="M24 14v10l8 5"/>
+          </svg>
+          <h3>Horario</h3>
+          <p>Lunes a sábado: 2:00 p.m. – 8:00 p.m.</p>
+          <p>Domingos y festivos: 11:00 a.m. – 7:00 p.m.</p>
+        </div>
+        <div class="info-card" data-reveal>
+          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M24 44s14-13 14-24A14 14 0 0 0 10 20c0 11 14 24 14 24Z"/><circle cx="24" cy="19" r="5"/>
+          </svg>
+          <h3>Ubicación</h3>
+          <p>Parque Principal de Guateque</p>
+          <p>27 de septiembre de 2026</p>
+        </div>
+        <div class="info-card" data-reveal>
+          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="8" y="12" width="32" height="24" rx="4"/><path d="M8 14l16 12 16-12"/>
+          </svg>
+          <h3>Contacto</h3>
+          <p>Paula (Gerente): <a href="tel:123456789">123 456 789</a> · Julián (Tesorero): <a href="tel:987654321">987 654 321</a></p>
+          <p>Instagram: @dulcecapricho</p>
+        </div>
+      </div>
+
+      <p class="placeholder-note">* Horario e Instagram son datos de ejemplo — reemplázalos por la información real del negocio.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="assets/img/logo-dulce-capricho.webp" alt="Logo de Dulce Capricho Obleas" width="40" height="40">
+      <span class="brand-name">Dulce Capricho</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#sabores">Sabores</a>
+      <a href="#pedidos">Pedidos</a>
+    </nav>
+    <p class="copyright">© <span data-year>2026</span> Dulce Capricho. Proyecto estudiantil hecho con cariño.</p>
+  </div>
+</footer>
+
+<script defer src="lib/manifest.js?v=20260920"></script>
+<script defer src="main.js?v=20260920"></script>
+
+</body>
+</html>
