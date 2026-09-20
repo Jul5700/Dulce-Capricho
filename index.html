@@ -20,6 +20,22 @@
   opacity: 1 !important;
   transform: none !important;
   visibility: visible !important;
+  /* Estilo de marco de chocolate para Misión y Visión */
+.mission-card, .vision-card {
+  border: 3.5px solid #4A2E1B; /* Borde color chocolate oscuro */
+  border-radius: 18px; /* Esquinas suaves y redondeadas */
+  background-color: #FFF9F2; /* Fondo crema suave para resaltar el chocolate */
+  box-shadow: 0 6px 15px rgba(74, 46, 27, 0.2); /* Sombra tenue estilo chocolate */
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.mission-card:hover, .vision-card:hover {
+  transform: translateY(-4px);
+  border-color: #311B0B;
+  box-shadow: 0 10px 22px rgba(74, 46, 27, 0.35);
+}
 }
 
 .mission-vision-grid{
