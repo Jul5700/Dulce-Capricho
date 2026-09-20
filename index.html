@@ -1,479 +1,655 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dulce Capricho | Obleas artesanales</title>
-<meta name="description" content="Dulce Capricho: obleas artesanales preparadas al momento, con arequipe, frutas y deliciosos sabores. Conoce nuestro saber y encuéntranos en el Parque Principal de Guateque el 27 de septiembre de 2026 desde las 7 a. m. hasta las 8 p. m. Este es un proyecto de estudiantes de la especialidad de Comercio.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Dulce Capricho">
-<link rel="canonical" href="https://jul5700.github.io/Dulce-Capricho/">
-<link rel="icon" type="image/png" href="assets/img/favicon-dulce-capricho.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260920">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-.mission-vision-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1.25rem;
-  margin:2rem 0;
-}
-.mission-card,.vision-card{
-  padding:1.5rem;
-  border-radius:1.25rem;
-  background:var(--cream-soft,#fff8ec);
-  border:1px solid rgba(107,58,23,.12);
-  box-shadow:0 12px 30px rgba(59,36,23,.08);
-}
-.mission-card h3,.vision-card h3{margin-top:0}
-.team-avatar{
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-}
-.team-avatar svg{
-  display:block;
-  width:100%;
-  height:100%;
-}
-.team-initial{
-  width:100%;
-  height:100%;
-  min-height:100%;
-  display:grid;
-  place-items:center;
-  font-size:2rem;
-  font-weight:700;
-  color:var(--cream-soft,#fff8ec);
-}
-.image-flavor-grid{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-}
-.image-flavor-card{overflow:hidden}
-.flavor-image{
-  display:block;
-  width:100%;
-  aspect-ratio:1054/1492;
-  object-fit:cover;
-}
-.image-flavor-card .flavor-body{padding-top:1.1rem}
-@media (max-width:760px){
-  .mission-vision-grid,.image-flavor-grid{grid-template-columns:1fr}
-}
-</style>
+  <title>Dulce Capricho | Obleas artesanales</title>
+  <meta name="description" content="Dulce Capricho S.A. ofrece obleas artesanales con diferentes sabores, toppings y salsas.">
+  <link rel="canonical" href="https://jul5700.github.io/Dulce-Capricho/">
+
+  <link rel="icon" href="assets/img/favicon-dulce-capricho.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260920">
+
+  <style>
+    .team-avatar {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .team-avatar svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flavor-grid,
+    .toppings-grid,
+    .sauces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flavor-card,
+    .topping-card,
+    .sauce-card {
+      overflow: hidden;
+    }
+
+    .flavor-card img,
+    .topping-card img,
+    .sauce-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .flavor-card .card-content,
+    .topping-card .card-content,
+    .sauce-card .card-content {
+      padding: 1rem;
+    }
+
+    .sauce-section {
+      margin-top: 4rem;
+    }
+
+    .section-subtitle {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+
+    /* Ajustes únicamente para toppings y salsas: conservan el estilo original */
+    .toppings-grid,
+    .sauces-grid {
+      align-items: stretch;
+    }
+
+    .topping-card,
+    .sauce-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .topping-image,
+    .sauce-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #fff8ed;
+    }
+
+    .topping-image svg,
+    .sauce-image svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .topping-card .card-content,
+    .sauce-card .card-content {
+      flex: 1;
+    }
+
+    /* El encabezado no queda pegado a la pantalla */
+    .site-header {
+      position: relative !important;
+      top: auto !important;
+    }
+  </style>
 </head>
 
 <body>
 
-<a href="#contenido" class="skip-link">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Dulce Capricho, inicio">
+        <img src="logo-dulce-capricho.webp" alt="Logo de Dulce Capricho">
+      </a>
 
-<!-- Custom cursor (desktop only, decorative) -->
-<div class="cursor" data-cursor-root aria-hidden="true">
-  <span class="cursor-dot"></span>
-  <span class="cursor-ring"></span>
-</div>
-
-<header data-nav>
-  <div class="container nav-inner">
-    <a href="#inicio" class="brand">
-      <img class="brand-mark" src="logo-dulce-capricho.webp" alt="Logo de Dulce Capricho Obleas" width="44" height="44">
-      <span class="brand-name">Dulce Capricho<span>Amor a primera mordida</span></span>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#sabores">Sabores</a>
-      <a href="#pedidos">Pedidos</a>
-      <a href="#pedidos" class="btn btn-primary">Pedir ahora</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main id="contenido">
-
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Proyecto estudiantil · Especialidad en Comercio</p>
-        <h1>Dulce Capricho: obleas artesanales y un sabor inolvidable.</h1>
-        <p class="tagline-stamp">Amor a primera mordida</p>
-        <p class="lead">En Dulce Capricho armamos cada oblea al momento: masa crocante, arequipe calientito y los sabores de siempre, hechas con las manos de un equipo de estudiantes.</p>
-        <div class="cta-row">
-          <a href="#sabores" class="btn btn-primary">Ver sabores</a>
-          <a href="#pedidos" class="btn btn-secondary">Cómo pedir</a>
-        </div>
-      </div>
-
-      <div class="hero-art">
-        <svg viewBox="0 0 440 440" role="img" aria-label="Ilustración de una oblea armándose por capas">
-          <defs>
-            <pattern id="waffle" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <rect width="14" height="14" fill="var(--cream-soft)"/>
-              <line x1="0" y1="0" x2="0" y2="14" stroke="var(--wafer-line)" stroke-width="2"/>
-              <line x1="0" y1="0" x2="14" y2="0" stroke="var(--wafer-line)" stroke-width="2"/>
-            </pattern>
-            <radialGradient id="waferShade" cx="35%" cy="28%" r="75%">
-              <stop offset="0%" stop-color="#FFFDF6"/>
-              <stop offset="55%" stop-color="#F7ECD9" stop-opacity="0"/>
-              <stop offset="100%" stop-color="#B98A4E" stop-opacity=".4"/>
-            </radialGradient>
-            <linearGradient id="drizzleShade" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#C98F52"/>
-              <stop offset="50%" stop-color="#8B5323"/>
-              <stop offset="100%" stop-color="#6B3A17"/>
-            </linearGradient>
-            <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#3B2417" flood-opacity="0.25"/>
-            </filter>
-          </defs>
-
-          <g class="wafer-bottom">
-            <circle cx="220" cy="238" r="150" fill="url(#waffle)" stroke="var(--caramel-deep)" stroke-width="4" filter="url(#softShadow)"/>
-            <circle cx="220" cy="238" r="150" fill="url(#waferShade)"/>
-          </g>
-
-          <path class="drizzle" d="M85,220 Q135,175 185,220 T285,220 T355,195" fill="none" stroke="url(#drizzleShade)" stroke-width="15" stroke-linecap="round"/>
-          <path class="drizzle" d="M85,216 Q135,171 185,216 T285,216 T355,191" fill="none" stroke="#E8C387" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-
-          <circle class="sprinkle" cx="140" cy="255" r="6" fill="var(--mora)"/>
-          <circle class="sprinkle" cx="300" cy="250" r="6" fill="var(--citrus)"/>
-          <circle class="sprinkle" cx="180" cy="290" r="5" fill="var(--fresa)"/>
-          <circle class="sprinkle" cx="260" cy="295" r="5" fill="var(--mora)"/>
-          <circle class="sprinkle" cx="220" cy="270" r="6" fill="var(--citrus)"/>
-          <circle class="sprinkle" cx="320" cy="275" r="5" fill="var(--fresa)"/>
-
-          <g class="wafer-top">
-            <circle cx="220" cy="228" r="150" fill="url(#waffle)" stroke="var(--caramel-deep)" stroke-width="4" opacity="0.97" filter="url(#softShadow)"/>
-            <circle cx="220" cy="228" r="150" fill="url(#waferShade)"/>
-          </g>
-        </svg>
-      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#sabores">Sabores</a>
+        <a href="#toppings">Toppings</a>
+        <a href="#salsas">Salsas</a>
+        <a href="#pedidos">Pedidos</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Arequipe</span><span>Mora</span><span>Coco</span><span>Fresa</span><span>Queso</span>
-      <span>Arequipe</span><span>Mora</span><span>Coco</span><span>Fresa</span><span>Queso</span>
-    </div>
-  </div>
+  <main>
 
-  <!-- NOSOTROS -->
-  <section class="story" id="nosotros">
-    <div class="container story-inner">
-      <div data-reveal>
-        <h2>Un proyecto que nació en el salón de clase</h2>
-        <p>Dulce Capricho es la empresa que armamos como estudiantes de la especialidad de Comercio: una idea de emprendimiento que decidimos llevar de la teoría a la plaza, oblea por oblea.</p>
-        <p>Cada oblea se arma al momento de pedirla, con arequipe casero y los sabores de siempre. Nada de vitrinas frías: aquí todo se sirve recién hecho, con las mismas ganas con las que armamos el proyecto.</p>
-      </div>
-
-      <div class="story-video-wrap" data-reveal>
-        <div class="story-video-frame">
-          <video
-            data-story-video
-            src="equipo-dulce-capricho.mp4"
-            poster="equipo-dulce-capricho-poster.jpg"
-            autoplay muted loop playsinline preload="metadata">
-          </video>
-        </div>
-        <p class="story-video-caption">Así armamos el proyecto, sonrisa incluida</p>
-      </div>
-    </div>
-
-    <!-- MISIÓN Y VISIÓN -->
-    <div class="container">
-      <div class="mission-vision-grid" data-reveal>
-        <article class="mission-card">
-          <h3>Misión</h3>
-          <p>Dulce Capricho S.A. es una empresa productora y comercializadora de obleas, elaboradas con ingredientes de calidad y diferentes combinaciones de sabores. Nuestro propósito es ofrecer productos deliciosos e innovadores que brinden una experiencia dulce, fresca y agradable a nuestros clientes, satisfaciendo sus gustos y necesidades en el mercado regional.</p>
-        </article>
-
-        <article class="vision-card">
-          <h3>Visión</h3>
-          <p>Para el año 2027, Dulce Capricho S.A. busca ser reconocida en Bogotá por la elaboración y comercialización de obleas de alta calidad, destacándose por la innovación, variedad y sabor de nuestros productos, y convirtiéndose en una marca reconocida y preferida por nuestros clientes.</p>
-        </article>
-      </div>
-    </div>
-
-    <!-- EQUIPO -->
-    <div class="container team-block" data-reveal>
-      <h3>El equipo</h3>
-
-      <div class="team-grid">
-
-        <!-- PAULA -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <svg viewBox="0 0 100 100" role="img" aria-label="Avatar de Paula Guataquira">
-              <defs>
-                <radialGradient id="avatarBgPaula" cx="35%" cy="30%" r="75%">
-                  <stop offset="0%" stop-color="#E8A33D"/>
-                  <stop offset="100%" stop-color="#A23B5C"/>
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="50" fill="url(#avatarBgPaula)"/>
-              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
-              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="team-name">Paula Guataquira</p>
-          <p class="team-role">Gerente</p>
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Dulce, fresca y hecha al momento</p>
+          <h1>Dulce Capricho</h1>
+          <p class="hero-description">
+            Obleas artesanales preparadas con deliciosos ingredientes y combinaciones para todos los gustos.
+          </p>
+          <a class="btn" href="#sabores">Ver nuestros sabores</a>
         </div>
 
-        <!-- JULIÁN -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <svg viewBox="0 0 100 100" role="img" aria-label="Avatar de Julián Martínez">
-              <defs>
-                <radialGradient id="avatarBgJulian" cx="35%" cy="30%" r="75%">
-                  <stop offset="0%" stop-color="#C98F52"/>
-                  <stop offset="100%" stop-color="#6B3A17"/>
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="50" fill="url(#avatarBgJulian)"/>
-              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
-              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="team-name">Julián Martínez</p>
-          <p class="team-role">Tesorero</p>
-        </div>
-
-        <!-- EMILY -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <svg viewBox="0 0 100 100" role="img" aria-label="Avatar de Emily">
-              <defs>
-                <radialGradient id="avatarBgEmily" cx="35%" cy="30%" r="75%">
-                  <stop offset="0%" stop-color="#E8A33D"/>
-                  <stop offset="100%" stop-color="#A23B5C"/>
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="50" fill="url(#avatarBgEmily)"/>
-              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
-              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="team-name">Emily</p>
-          <p class="team-role">Integrante</p>
-        </div>
-
-        <!-- DEIVID -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <svg viewBox="0 0 100 100" role="img" aria-label="Avatar de Deivid">
-              <defs>
-                <radialGradient id="avatarBgDeivid" cx="35%" cy="30%" r="75%">
-                  <stop offset="0%" stop-color="#C98F52"/>
-                  <stop offset="100%" stop-color="#6B3A17"/>
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="50" fill="url(#avatarBgDeivid)"/>
-              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
-              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="team-name">Deivid</p>
-          <p class="team-role">Integrante</p>
-        </div>
-
-        <!-- TOMÁS -->
-        <div class="team-card">
-          <div class="team-avatar">
-            <svg viewBox="0 0 100 100" role="img" aria-label="Avatar de Tomás">
-              <defs>
-                <radialGradient id="avatarBgTomas" cx="35%" cy="30%" r="75%">
-                  <stop offset="0%" stop-color="#E8A33D"/>
-                  <stop offset="100%" stop-color="#6B3A17"/>
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="50" fill="url(#avatarBgTomas)"/>
-              <circle cx="50" cy="40" r="16" fill="#FFF8EC" opacity="0.92"/>
-              <path d="M18,90 Q50,58 82,90 Z" fill="#FFF8EC" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="team-name">Tomás</p>
-          <p class="team-role">Secretario</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- VALORES -->
-  <section class="values">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <h2>Lo que no cambia</h2>
-        <p>Tres cosas que hacemos igual desde el primer día.</p>
-      </div>
-
-      <div class="values-grid">
-        <div class="value-card" data-reveal>
-          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M24 6c-8 4-14 12-14 20a14 14 0 0 0 28 0c0-8-6-16-14-20Z"/>
-            <path d="M24 16v18"/>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 500 420" role="img">
+            <defs>
+              <linearGradient id="heroWafer" x1="0" x2="1">
+                <stop offset="0" stop-color="#f4c27a"/>
+                <stop offset="1" stop-color="#d98a3b"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="250" cy="330" rx="180" ry="35" fill="#000" opacity=".12"/>
+            <path d="M95 150 Q250 105 405 150 L370 300 Q250 345 130 300Z" fill="url(#heroWafer)"/>
+            <path d="M115 155 Q250 120 385 155" fill="none" stroke="#fff1d1" stroke-width="12" opacity=".8"/>
+            <path d="M130 220 Q250 180 370 220" fill="none" stroke="#fff1d1" stroke-width="10" opacity=".7"/>
+            <path d="M145 280 Q250 245 355 280" fill="none" stroke="#fff1d1" stroke-width="9" opacity=".7"/>
+            <circle cx="170" cy="145" r="24" fill="#7a3e20"/>
+            <circle cx="220" cy="132" r="20" fill="#e33e58"/>
+            <circle cx="275" cy="132" r="22" fill="#f6c343"/>
+            <circle cx="330" cy="145" r="21" fill="#6cae45"/>
           </svg>
-          <h3>Ingredientes frescos</h3>
-          <p>Arequipe hecho en casa, frutas de temporada y queso campesino escogido a diario.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="value-card" data-reveal>
-          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M24 40s-16-9.5-16-21A9 9 0 0 1 24 13a9 9 0 0 1 16 6c0 11.5-16 21-16 21Z"/>
-          </svg>
-          <h3>Hecho con dedicación</h3>
-          <p>Un proyecto armado entre estudiantes, con las ganas de hacer las cosas bien desde la primera oblea.</p>
-        </div>
-
-        <div class="value-card" data-reveal>
-          <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="24" cy="24" r="17"/>
-            <path d="M24 14v10l7 5"/>
-          </svg>
-          <h3>Hechas al momento</h3>
-          <p>Cada oblea se arma cuando la pides: crocante, calientita y recién servida.</p>
-        </div>
+    <div class="marquee" aria-label="Ingredientes destacados">
+      <div class="marquee-track">
+        <span>Arequipe</span>
+        <span>•</span>
+        <span>Mora</span>
+        <span>•</span>
+        <span>Coco</span>
+        <span>•</span>
+        <span>Fresa</span>
+        <span>•</span>
+        <span>Queso</span>
+        <span>•</span>
+        <span>Arequipe</span>
+        <span>•</span>
+        <span>Mora</span>
+        <span>•</span>
+        <span>Coco</span>
+        <span>•</span>
+        <span>Fresa</span>
+        <span>•</span>
+        <span>Queso</span>
       </div>
     </div>
-  </section>
 
-  <!-- SABORES -->
-  <section class="menu" id="sabores">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <h2>Sabores</h2>
-        <p>Elige tu combinación o pide la de siempre.</p>
+    <section id="nosotros" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Conócenos</p>
+          <h2>Sobre Dulce Capricho</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-copy">
+            <p>
+              En Dulce Capricho nos encanta convertir una sencilla oblea en una experiencia llena de sabor.
+              Creamos combinaciones deliciosas con ingredientes seleccionados para que cada cliente pueda
+              disfrutar su oblea como más le guste.
+            </p>
+            <p>
+              Somos una empresa escolar enfocada en ofrecer productos de calidad, preparados con dedicación
+              y pensando siempre en nuestros clientes.
+            </p>
+          </div>
+
+          <div class="video-card">
+            <video controls preload="metadata" poster="equipo-dulce-capricho-poster.jpg">
+              <source src="equipo-dulce-capricho.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="menu-grid image-flavor-grid">
+    <section class="section section-soft">
+      <div class="container">
+        <div class="mission-vision">
+          <article class="info-card">
+            <p class="eyebrow">Nuestra misión</p>
+            <h2>Misión</h2>
+            <p>
+              Dulce Capricho S.A. es una empresa productora y comercializadora de obleas, elaboradas con
+              ingredientes de calidad y diferentes combinaciones de sabores. Nuestro propósito es ofrecer
+              productos deliciosos e innovadores que brinden una experiencia dulce, fresca y agradable a
+              nuestros clientes, satisfaciendo sus gustos y necesidades en el mercado regional.
+            </p>
+          </article>
 
-        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--fresa)">
-          <img class="flavor-image" src="oblea-loca.jpeg" alt="Oblea Loca de Dulce Capricho">
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <span class="flavor-title">Oblea Loca</span>
+          <article class="info-card">
+            <p class="eyebrow">Nuestra visión</p>
+            <h2>Visión</h2>
+            <p>
+              Para el año 2027, Dulce Capricho S.A. busca ser reconocida en Bogotá por la elaboración y
+              comercialización de obleas de alta calidad, destacándose por la innovación, variedad y sabor
+              de nuestros productos, y convirtiéndose en una marca reconocida y preferida por nuestros clientes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Nuestro equipo</p>
+          <h2>Personas detrás de Dulce Capricho</h2>
+        </div>
+
+        <div class="team-grid">
+
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Avatar de Paula Guataquira">
+              <svg viewBox="0 0 120 120" role="img">
+                <defs>
+                  <linearGradient id="avatarBgPaula" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff9a9e"/>
+                    <stop offset="1" stop-color="#fad0c4"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="60" fill="url(#avatarBgPaula)"/>
+                <circle cx="60" cy="45" r="22" fill="#f2c6a0"/>
+                <path d="M35 45 Q60 12 85 45 Q80 30 60 30 Q40 30 35 45Z" fill="#4a2b1d"/>
+                <path d="M30 105 Q35 72 60 72 Q85 72 90 105Z" fill="#7b4b8a"/>
+                <circle cx="52" cy="46" r="2.5" fill="#333"/>
+                <circle cx="68" cy="46" r="2.5" fill="#333"/>
+                <path d="M53 57 Q60 62 67 57" fill="none" stroke="#9a4d4d" stroke-width="2"/>
+              </svg>
             </div>
-            <p class="flavor-desc">Crujiente por fuera y totalmente loca por dentro, con arequipe, crema, trozos de galleta y chispas.</p>
-          </div>
-        </article>
+            <h3>Paula Guataquira</h3>
+            <p>Gerente</p>
+          </article>
 
-        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--caramel-light)">
-          <img class="flavor-image" src="oblea-sencilla.jpeg" alt="Oblea Sencilla de Dulce Capricho">
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <span class="flavor-title">Oblea Sencilla</span>
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Avatar de Julián Martínez">
+              <svg viewBox="0 0 120 120" role="img">
+                <defs>
+                  <linearGradient id="avatarBgJulian" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#74ebd5"/>
+                    <stop offset="1" stop-color="#acb6e5"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="60" fill="url(#avatarBgJulian)"/>
+                <circle cx="60" cy="45" r="22" fill="#c98d62"/>
+                <path d="M37 43 Q42 18 62 20 Q82 20 85 44 Q78 34 68 35 Q54 38 37 43Z" fill="#2f241f"/>
+                <path d="M30 105 Q35 72 60 72 Q85 72 90 105Z" fill="#365d7a"/>
+                <circle cx="52" cy="46" r="2.5" fill="#333"/>
+                <circle cx="68" cy="46" r="2.5" fill="#333"/>
+                <path d="M52 57 Q60 61 68 57" fill="none" stroke="#7a3d3d" stroke-width="2"/>
+              </svg>
             </div>
-            <p class="flavor-desc">Clásica, suave y deliciosa, perfecta para cualquier momento.</p>
-          </div>
-        </article>
+            <h3>Julián Martínez</h3>
+            <p>Tesorero</p>
+          </article>
 
-        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--citrus)">
-          <img class="flavor-image" src="oblea-mexicana.jpeg" alt="Oblea Mexicana de Dulce Capricho">
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <span class="flavor-title">Oblea Mexicana</span>
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Avatar de Emily">
+              <svg viewBox="0 0 120 120" role="img">
+                <defs>
+                  <linearGradient id="avatarBgEmily" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fbc2eb"/>
+                    <stop offset="1" stop-color="#a6c1ee"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="60" fill="url(#avatarBgEmily)"/>
+                <circle cx="60" cy="45" r="22" fill="#e3ad86"/>
+                <path d="M35 49 Q32 20 60 16 Q88 20 85 49 Q77 29 60 29 Q43 29 35 49Z" fill="#5b392c"/>
+                <path d="M30 105 Q35 72 60 72 Q85 72 90 105Z" fill="#c85c8a"/>
+                <circle cx="52" cy="46" r="2.5" fill="#333"/>
+                <circle cx="68" cy="46" r="2.5" fill="#333"/>
+                <path d="M53 57 Q60 62 67 57" fill="none" stroke="#914949" stroke-width="2"/>
+              </svg>
             </div>
-            <p class="flavor-desc">Una combinación dulce y picante inspirada en los sabores de México.</p>
-          </div>
-        </article>
+            <h3>Emily</h3>
+            <p>Integrante</p>
+          </article>
 
-        <article class="flavor-card image-flavor-card" data-reveal style="--flavor-color:var(--fresa)">
-          <img class="flavor-image" src="oblea-fresa.jpeg" alt="Oblea de Fresa de Dulce Capricho">
-          <div class="flavor-body">
-            <div class="flavor-head">
-              <span class="flavor-title">Oblea de Fresa</span>
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Avatar de Deivid">
+              <svg viewBox="0 0 120 120" role="img">
+                <defs>
+                  <linearGradient id="avatarBgDeivid" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#89f7fe"/>
+                    <stop offset="1" stop-color="#66a6ff"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="60" fill="url(#avatarBgDeivid)"/>
+                <circle cx="60" cy="45" r="22" fill="#bd8058"/>
+                <path d="M37 43 Q43 18 62 19 Q80 19 84 43 Q73 34 61 34 Q48 34 37 43Z" fill="#30231e"/>
+                <path d="M30 105 Q35 72 60 72 Q85 72 90 105Z" fill="#3f6f95"/>
+                <circle cx="52" cy="46" r="2.5" fill="#333"/>
+                <circle cx="68" cy="46" r="2.5" fill="#333"/>
+                <path d="M52 57 Q60 61 68 57" fill="none" stroke="#783f3f" stroke-width="2"/>
+              </svg>
             </div>
-            <p class="flavor-desc">Fresca, ligera y deliciosa, con fresas frescas, crema y dulce de leche.</p>
-          </div>
-        </article>
+            <h3>Deivid</h3>
+            <p>Integrante</p>
+          </article>
 
+          <article class="team-card">
+            <div class="team-avatar" aria-label="Avatar de Tomás">
+              <svg viewBox="0 0 120 120" role="img">
+                <defs>
+                  <linearGradient id="avatarBgTomas" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f6d365"/>
+                    <stop offset="1" stop-color="#fda085"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="60" fill="url(#avatarBgTomas)"/>
+                <circle cx="60" cy="45" r="22" fill="#d39a70"/>
+                <path d="M36 44 Q40 17 61 17 Q83 19 85 45 Q75 31 60 32 Q45 32 36 44Z" fill="#38291f"/>
+                <path d="M30 105 Q35 72 60 72 Q85 72 90 105Z" fill="#8060a8"/>
+                <circle cx="52" cy="46" r="2.5" fill="#333"/>
+                <circle cx="68" cy="46" r="2.5" fill="#333"/>
+                <path d="M52 57 Q60 61 68 57" fill="none" stroke="#804343" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Tomás</h3>
+            <p>Secretario</p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="sides" data-reveal>
-        <strong>¿Para acompañar?</strong>
-        <span class="side-chip">Chocolate caliente</span>
-        <span class="side-chip">Agua de panela con limón</span>
-        <span class="side-chip">Café tinto</span>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Lo que nos representa</p>
+          <h2>Nuestros valores</h2>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <h3>Ingredientes frescos</h3>
+            <p>Seleccionamos ingredientes para conseguir un sabor delicioso en cada oblea.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Hecho con dedicación</h3>
+            <p>Preparamos nuestros productos cuidando cada detalle.</p>
+          </article>
+
+          <article class="value-card">
+            <h3>Hechas al momento</h3>
+            <p>Buscamos que cada cliente reciba una oblea fresca y agradable.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PEDIDOS -->
-  <section class="pedidos" id="pedidos">
+    <section id="sabores" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Elige tu favorita</p>
+          <h2>Nuestros sabores</h2>
+          <p class="section-subtitle">
+            Descubre algunas de las combinaciones que tenemos preparadas para ti.
+          </p>
+        </div>
+
+        <div class="flavor-grid">
+
+          <article class="flavor-card card">
+            <img src="oblea-loca.jpeg" alt="Oblea Loca" loading="lazy">
+            <div class="card-content">
+              <h3>Oblea Loca</h3>
+              <p>Una combinación divertida y llena de sabor.</p>
+            </div>
+          </article>
+
+          <article class="flavor-card card">
+            <img src="oblea-sencilla.jpeg" alt="Oblea Sencilla" loading="lazy">
+            <div class="card-content">
+              <h3>Oblea Sencilla</h3>
+              <p>Una opción clásica para disfrutar una oblea deliciosa.</p>
+            </div>
+          </article>
+
+          <article class="flavor-card card">
+            <img src="oblea-mexicana.jpeg" alt="Oblea Mexicana" loading="lazy">
+            <div class="card-content">
+              <h3>Oblea Mexicana</h3>
+              <p>Una combinación especial para quienes buscan algo diferente.</p>
+            </div>
+          </article>
+
+          <article class="flavor-card card">
+            <img src="oblea-fresa.jpeg" alt="Oblea de fresa" loading="lazy">
+            <div class="card-content">
+              <h3>Oblea de fresa</h3>
+              <p>Una opción fresca y deliciosa con sabor a fresa.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: TOPPINGS -->
+    <section id="toppings" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Personaliza tu oblea</p>
+          <h2>Toppings</h2>
+          <p class="section-subtitle">
+            Elige tus toppings favoritos para darle un toque especial a tu oblea.
+          </p>
+        </div>
+
+        <div class="toppings-grid">
+
+          <article class="topping-card card">
+            <div class="topping-image" role="img" aria-label="Chips de chocolate"><svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="#f8e8d8"/><ellipse cx="400" cy="470" rx="260" ry="35" fill="#5a321f" opacity=".12"/><g fill="#4a2416"><path d="M180 190h70v70h-70z"/><path d="M290 145h78v78h-78z"/><path d="M420 195h72v72h-72z"/><path d="M545 145h78v78h-78z"/><path d="M235 300h80v80h-80z"/><path d="M390 330h76v76h-76z"/><path d="M520 285h82v82h-82z"/></g><g fill="#8b4b2e"><path d="M190 200h45v12h-45z"/><path d="M300 155h48v12h-48z"/><path d="M430 205h42v12h-42z"/></g></svg></div>
+            <div class="card-content">
+              <h3>Chips de chocolate</h3>
+              <p>Pequeños trozos de chocolate para darle un toque irresistible.</p>
+            </div>
+          </article>
+
+          <article class="topping-card card">
+            <div class="topping-image" role="img" aria-label="Pepitas de colores"><svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="#fff1dc"/><ellipse cx="400" cy="450" rx="280" ry="45" fill="#5a321f" opacity=".10"/><path d="M170 285 Q400 170 630 285 Q400 420 170 285Z" fill="#fff" stroke="#e2cdb9" stroke-width="12"/><g stroke-linecap="round" stroke-width="18"><path d="M235 260l28-20" stroke="#e85d75"/><path d="M300 300l28-18" stroke="#65a9d8"/><path d="M365 245l28-18" stroke="#e8a62f"/><path d="M430 305l28-18" stroke="#71a85a"/><path d="M500 250l28-18" stroke="#9b68c4"/><path d="M555 300l28-18" stroke="#e85d75"/><path d="M335 340l28-18" stroke="#e8a62f"/><path d="M460 355l28-18" stroke="#65a9d8"/></g></svg></div>
+            <div class="card-content">
+              <h3>Pepitas de colores</h3>
+              <p>Coloridas y divertidas para decorar tu oblea.</p>
+            </div>
+          </article>
+
+          <article class="topping-card card">
+            <div class="topping-image" role="img" aria-label="Frutas frescas"><svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="#fff4e6"/><ellipse cx="400" cy="455" rx="260" ry="38" fill="#5a321f" opacity=".10"/><g><circle cx="270" cy="285" r="72" fill="#e85d75"/><circle cx="400" cy="245" r="68" fill="#e84d43"/><circle cx="530" cy="290" r="72" fill="#f0b42f"/><path d="M225 210q45-55 90 0" fill="none" stroke="#719b57" stroke-width="18" stroke-linecap="round"/><path d="M365 180q35-55 75 0" fill="none" stroke="#719b57" stroke-width="18" stroke-linecap="round"/><path d="M500 215q45-55 90 0" fill="none" stroke="#719b57" stroke-width="18" stroke-linecap="round"/></g><g fill="#fff" opacity=".45"><circle cx="245" cy="260" r="15"/><circle cx="375" cy="220" r="14"/><circle cx="505" cy="270" r="15"/></g></svg></div>
+            <div class="card-content">
+              <h3>Frutas</h3>
+              <p>Frutas frescas para una combinación dulce y refrescante.</p>
+            </div>
+          </article>
+
+          <article class="topping-card card">
+            <div class="topping-image" role="img" aria-label="Coco rallado"><svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="#f8efe2"/><ellipse cx="400" cy="455" rx="260" ry="40" fill="#5a321f" opacity=".10"/><path d="M170 315 Q400 190 630 315 Q400 440 170 315Z" fill="#fff" stroke="#dfcfbd" stroke-width="12"/><g stroke="#fff" stroke-width="13" stroke-linecap="round"><path d="M245 285l45-20"/><path d="M305 325l55-22"/><path d="M380 270l55-20"/><path d="M450 330l55-22"/><path d="M520 285l45-20"/><path d="M270 355l48-20"/><path d="M410 370l50-20"/></g><circle cx="155" cy="185" r="55" fill="#8d5b35"/><path d="M125 185q30-55 60 0q-30 55-60 0Z" fill="#fff"/></svg></div>
+            <div class="card-content">
+              <h3>Coco</h3>
+              <p>Coco para agregar textura y un delicioso sabor tropical.</p>
+            </div>
+          </article>
+
+          <article class="topping-card card">
+            <div class="topping-image" role="img" aria-label="Gomitas"><svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="800" height="600" fill="#fff0df"/><ellipse cx="400" cy="455" rx="270" ry="40" fill="#5a321f" opacity=".10"/><g stroke="#8b3d35" stroke-width="7"><path d="M190 300q0-90 75-90t75 90v55h-150z" fill="#e85d75"/><path d="M350 260q0-90 75-90t75 90v70h-150z" fill="#f0b42f"/><path d="M510 305q0-90 75-90t75 90v55h-150z" fill="#71a85a"/></g><g fill="#fff" opacity=".7"><circle cx="225" cy="255" r="8"/><circle cx="270" cy="285" r="8"/><circle cx="385" cy="220" r="8"/><circle cx="430" cy="250" r="8"/><circle cx="545" cy="260" r="8"/><circle cx="590" cy="295" r="8"/></g></svg></div>
+            <div class="card-content">
+              <h3>Gomitas</h3>
+              <p>Gomitas dulces para una oblea divertida y colorida.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: SALSAS -->
+    <section id="salsas" class="section sauce-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Un toque extra de sabor</p>
+          <h2>Salsas</h2>
+          <p class="section-subtitle">
+            Completa tu oblea con una de nuestras deliciosas salsas.
+          </p>
+        </div>
+
+        <div class="sauces-grid">
+
+          <article class="sauce-card card">
+            <div class="sauce-image" role="img" aria-label="Salsa de mora">
+              <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="moraBg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#fff7ee"/><stop offset="1" stop-color="#f4dfc9"/></radialGradient>
+                  <linearGradient id="moraSauce" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8e1f55"/><stop offset="1" stop-color="#4a123e"/></linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#moraBg)"/>
+                <ellipse cx="400" cy="470" rx="245" ry="35" fill="#6d3a2b" opacity=".13"/>
+                <path d="M205 215 Q400 135 595 215 L555 430 Q400 505 245 430Z" fill="#fff" stroke="#e7d3bf" stroke-width="12"/>
+                <path d="M225 235 Q400 165 575 235 Q545 390 400 425 Q255 390 225 235Z" fill="url(#moraSauce)"/>
+                <path d="M270 265 Q400 215 530 265" fill="none" stroke="#b94a7c" stroke-width="14" stroke-linecap="round" opacity=".7"/>
+                <g fill="#4d163f" stroke="#2f102d" stroke-width="5">
+                  <circle cx="145" cy="205" r="32"/><circle cx="180" cy="175" r="32"/><circle cx="150" cy="150" r="31"/>
+                  <circle cx="655" cy="215" r="32"/><circle cx="620" cy="180" r="32"/><circle cx="660" cy="155" r="31"/>
+                </g>
+                <g fill="#8f315f" opacity=".9"><circle cx="145" cy="194" r="8"/><circle cx="180" cy="164" r="8"/><circle cx="655" cy="204" r="8"/><circle cx="620" cy="169" r="8"/></g>
+              </svg>
+            </div>
+            <div class="card-content">
+              <h3>De Mora</h3>
+              <p>Una salsa de mora con un toque dulce y frutal.</p>
+            </div>
+          </article>
+
+          <article class="sauce-card card">
+            <div class="sauce-image" role="img" aria-label="Salsa de maracuyá">
+              <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="maracuyaBg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#f6dfad"/></radialGradient>
+                  <linearGradient id="maracuyaSauce" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd95a"/><stop offset="1" stop-color="#e8a928"/></linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#maracuyaBg)"/>
+                <ellipse cx="400" cy="470" rx="245" ry="35" fill="#9b681e" opacity=".14"/>
+                <path d="M205 215 Q400 135 595 215 L555 430 Q400 505 245 430Z" fill="#fff" stroke="#e6d0a8" stroke-width="12"/>
+                <path d="M225 235 Q400 165 575 235 Q545 390 400 425 Q255 390 225 235Z" fill="url(#maracuyaSauce)"/>
+                <g fill="#6b4314">
+                  <ellipse cx="300" cy="280" rx="7" ry="11"/><ellipse cx="350" cy="320" rx="7" ry="11"/><ellipse cx="410" cy="270" rx="7" ry="11"/><ellipse cx="470" cy="330" rx="7" ry="11"/><ellipse cx="515" cy="275" rx="7" ry="11"/>
+                  <ellipse cx="330" cy="365" rx="7" ry="11"/><ellipse cx="445" cy="370" rx="7" ry="11"/><ellipse cx="385" cy="350" rx="7" ry="11/>
+                </g>
+                <path d="M245 250 Q400 190 555 250" fill="none" stroke="#fff1a1" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+                <g fill="#e7a82e"><circle cx="150" cy="190" r="38"/><circle cx="650" cy="200" r="38"/></g>
+                <path d="M132 190 Q150 170 168 190 Q150 210 132 190Z" fill="#fff3a6"/><path d="M632 200 Q650 180 668 200 Q650 220 632 200Z" fill="#fff3a6"/>
+              </svg>
+            </div>
+            <div class="card-content">
+              <h3>Maracuyá</h3>
+              <p>Un toque tropical con el sabor característico del maracuyá.</p>
+            </div>
+          </article>
+
+          <article class="sauce-card card">
+            <div class="sauce-image" role="img" aria-label="Salsa de chocolate">
+              <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="chocoBg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#fff7ef"/><stop offset="1" stop-color="#ead5c2"/></radialGradient>
+                  <linearGradient id="chocoSauce" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7b3d1f"/><stop offset="1" stop-color="#32170f"/></linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#chocoBg)"/>
+                <ellipse cx="400" cy="470" rx="245" ry="35" fill="#4b2619" opacity=".14"/>
+                <path d="M205 215 Q400 135 595 215 L555 430 Q400 505 245 430Z" fill="#fff" stroke="#dcc7b6" stroke-width="12"/>
+                <path d="M225 235 Q400 165 575 235 Q545 390 400 425 Q255 390 225 235Z" fill="url(#chocoSauce)"/>
+                <path d="M255 270 Q350 220 470 255 Q510 270 540 300" fill="none" stroke="#b97950" stroke-width="17" stroke-linecap="round" opacity=".7"/>
+                <path d="M290 345 Q390 300 505 335" fill="none" stroke="#542512" stroke-width="16" stroke-linecap="round"/>
+                <g fill="#4b281b"><circle cx="150" cy="205" r="34"/><circle cx="650" cy="205" r="34"/><circle cx="675" cy="250" r="25"/></g>
+                <path d="M130 190 Q150 165 170 190" fill="none" stroke="#a86b45" stroke-width="8" stroke-linecap="round"/><path d="M630 190 Q650 165 670 190" fill="none" stroke="#a86b45" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="card-content">
+              <h3>Chocolate</h3>
+              <p>Una salsa cremosa de chocolate para los amantes de lo dulce.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="pedidos" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">¿Nos visitas?</p>
+          <h2>Pedidos y contacto</h2>
+        </div>
+
+        <div class="orders-grid">
+
+          <article class="info-card">
+            <h3>📍 Encuéntranos</h3>
+            <p><strong>Parque Principal de Guateque</strong></p>
+            <p>27 de septiembre de 2026</p>
+          </article>
+
+          <article class="info-card">
+            <h3>🕐 Horarios</h3>
+            <p><strong>Lunes a sábado:</strong> 2–8 p. m.</p>
+            <p><strong>Domingos y festivos:</strong> 11 a. m.–7 p. m.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>📞 Contacto</h3>
+            <p><strong>Julián:</strong> 3015574789</p>
+            <p><strong>Paula:</strong> 3222064113</p>
+          </article>
+
+          <article class="info-card">
+            <h3>📸 Instagram</h3>
+            <p>@dulcecapricho</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <div class="section-head" data-reveal>
-        <h2>¿Cómo pedir?</h2>
-        <p>Pásate por el local o escríbenos y te la dejamos lista.</p>
-      </div>
-
-      <div class="event-banner" data-reveal>
-        📍 Nos encuentras en el <strong>Parque Principal de Guateque</strong> — <strong>27 de septiembre de 2026</strong>
-      </div>
-
-      <div class="info-grid">
-        <div class="info-card" data-reveal>
-          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="24" cy="24" r="18"/><path d="M24 14v10l8 5"/>
-          </svg>
-          <h3>Horario</h3>
-          <p>Lunes a sábado: 2:00 p.m. – 8:00 p.m.</p>
-          <p>Domingos y festivos: 11:00 a.m. – 7:00 p.m.</p>
-        </div>
-
-        <div class="info-card" data-reveal>
-          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M24 44s14-13 14-24A14 14 0 0 0 10 20c0 11 14 24 14 24Z"/><circle cx="24" cy="19" r="5"/>
-          </svg>
-          <h3>Ubicación</h3>
-          <p>Parque Principal de Guateque</p>
-          <p>27 de septiembre de 2026</p>
-        </div>
-
-        <div class="info-card" data-reveal>
-          <svg class="info-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="8" y="12" width="32" height="24" rx="4"/><path d="M8 14l16 12 16-12"/>
-          </svg>
-          <h3>Contacto</h3>
-          <p>Paula (Gerente): <a href="tel:3222064113">322 206 4113</a> · Julián (Tesorero): <a href="tel:3015574789">301 557 4789</a></p>
-          <p>Instagram: @dulcecapricho</p>
-        </div>
-      </div>
+      <p>© 2026 Dulce Capricho S.A. Todos los derechos reservados.</p>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img class="brand-mark" src="logo-dulce-capricho.webp" alt="Logo de Dulce Capricho Obleas" width="40" height="40">
-      <span class="brand-name">Dulce Capricho</span>
-    </div>
-
-    <nav class="footer-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#sabores">Sabores</a>
-      <a href="#pedidos">Pedidos</a>
-    </nav>
-
-    <p class="copyright">© <span data-year>2026</span> Dulce Capricho. Proyecto estudiantil hecho con cariño.</p>
-  </div>
-</footer>
-
-<script defer src="lib/manifest.js?v=20260920"></script>
-<script defer src="main.js?v=20260920"></script>
+  <script src="lib/manifest.js?v=20260920"></script>
+  <script src="main.js?v=20260920"></script>
 
 </body>
 </html>
