@@ -15,6 +15,19 @@
 <link rel="stylesheet" href="styles.css?v=20260920">
 
 <style>
+  /* Ocultar menú superior con transición suave */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.nav-hidden {
+  transform: translateY(-100%);
+}
 /* Fuerza la visibilidad de todas las secciones */
 [data-reveal] {
   opacity: 1 !important;
@@ -582,6 +595,24 @@
 
   reveals.forEach(el => observer.observe(el));
 </script>
+<script>
+  const header = document.querySelector('header');
 
+  // Ocultar al bajar en la página
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      header.classList.add('nav-hidden');
+    } else {
+      header.classList.remove('nav-hidden');
+    }
+  });
+
+  // Mostrar cuando el cursor se acerca a la parte superior (primeros 70px)
+  window.addEventListener('mousemove', (e) => {
+    if (e.clientY <= 70) {
+      header.classList.remove('nav-hidden');
+    }
+  });
+</script>
 </body>
 </html>
