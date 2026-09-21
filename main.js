@@ -115,6 +115,38 @@
         card.style.setProperty("--ry", cy.toFixed(2) + "deg");
         raf = (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) ? requestAnimationFrame(loop) : null;
       }
+       /* Mostrar al equipo en 1 sola fila horizontal de 5 columnas */
+  .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  /* Reducir el tamaño de los avatares para que entren cómodamente */
+  .team-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  /* Ajustar el espacio interno de las tarjetas */
+  .team-card {
+    padding: 15px 10px;
+  }
+
+  /* Adaptar a 2 o 3 columnas en pantallas más pequeñas (celulares/tablets) */
+  @media (max-width: 900px) {
+    .team-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
     });
   }
 
