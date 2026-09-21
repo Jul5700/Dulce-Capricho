@@ -15,6 +15,27 @@
 <link rel="stylesheet" href="styles.css?v=20260920">
 
 <style>
+  /* Tarjeta del equipo en formato horizontal (foto a la izquierda, texto a la derecha) */
+  .team-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    gap: 15px !important;
+  }
+
+  .team-avatar {
+    width: 60px !important;
+    height: 60px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .team-name, .team-role {
+    margin: 0 !important;
+  }
   /* Efecto de agrandado al pasar el cursor sobre salsas y toppings */
 .topping-card, .salsa-card, .flavor-card, .sabor-card, .topping-item, .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
