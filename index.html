@@ -85,6 +85,24 @@ header.nav-hidden {
   font-weight:700;
   color:var(--cream-soft,#fff8ec);
 }
+  /* Cuadrícula de 3 columnas para los Toppings */
+  #toppings .image-flavor-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px;
+  }
+
+  /* Ajuste para imágenes más pequeñas y cuadradas */
+  #toppings .flavor-image {
+    aspect-ratio: 1 / 1 !important;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 760px) {
+    #toppings .image-flavor-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
 .image-flavor-grid{
   grid-template-columns:repeat(2,minmax(0,1fr));
 }
